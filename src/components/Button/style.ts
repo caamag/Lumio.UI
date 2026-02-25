@@ -9,6 +9,9 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 4px;
   font-size: ${(p) => (p.size ? p.size + "px" : "14px")};
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 250ms;
 
   color: ${(p) => (p.variant === "isEmpty" ? Colors.primary : "white")};
