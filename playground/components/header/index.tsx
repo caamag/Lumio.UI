@@ -16,6 +16,7 @@ const Header = () => {
           Storybook
         </a>
         <a href="https://github.com/caamag/Lumio.UI">GitHub</a>
+        <a href="#">npm</a>
       </_.Nav>
     </_.Header>
   );

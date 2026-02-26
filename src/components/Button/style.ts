@@ -5,7 +5,7 @@ import { Colors } from "../../global/Colors";
 export const Button = styled.button<ButtonProps>`
   border: none;
   color: white;
-  padding: 8px 16px;
+  padding: 12px 24px;
   border-radius: 4px;
   font-size: ${(p) => (p.size ? p.size + "px" : "14px")};
   cursor: pointer;
@@ -13,6 +13,7 @@ export const Button = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   transition: 250ms;
+  width: ${(p) => (p.width ? p.width + "px" : "auto")};
 
   color: ${(p) => (p.variant === "isEmpty" ? Colors.primary : "white")};
 

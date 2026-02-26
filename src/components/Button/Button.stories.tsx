@@ -11,21 +11,21 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const isPrimary: Story = {
   args: {
     children: "Primary Button",
     variant: "isPrimary",
   },
 };
 
-export const Empty: Story = {
+export const isEmpty: Story = {
   args: {
     children: "Empty Button",
     variant: "isEmpty",
   },
 };
 
-export const Danger: Story = {
+export const isDanger: Story = {
   args: {
     children: "Danger Button",
     variant: "isDanger",

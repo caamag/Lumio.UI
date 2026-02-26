@@ -39,10 +39,10 @@ export const Nav = styled.nav`
     color: #333;
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
 
     &:hover {
-      color: #1762dc;
+      color: #5b4dac;
     }
   }
 `;
