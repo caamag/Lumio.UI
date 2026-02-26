@@ -1,73 +1,133 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <h1>Lumio UI ✨</h1>
 
-Currently, two official plugins are available:
+  <p>
+    Lumio UI é uma biblioteca de componentes React moderna, leve e reutilizável,
+    criada com foco em consistência visual, tipagem forte e experiência de desenvolvedor.
+  </p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <p>
+    O projeto foi desenvolvido como um design system pessoal com o objetivo de explorar
+    arquitetura de bibliotecas frontend, componentização escalável e publicação via npm.
+  </p>
 
-## React Compiler
+  <h2>🚀 Instalação</h2>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  <pre><code>npm install lumio-ui</code></pre>
 
-## Expanding the ESLint configuration
+  <p>ou</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  <pre><code>yarn add lumio-ui</code></pre>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  <h2>📦 Requisitos</h2>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  <ul>
+    <li>React 18+</li>
+    <li>React DOM 18+</li>
+    <li>styled-components (caso utilizado)</li>
+  </ul>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  <h2>🔧 Uso</h2>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  <pre><code>
+import { Button } from "lumio-ui";
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+export function Example() {
+  return (
+    &lt;Button variant="isPrimary"&gt;
+      Clique aqui
+    &lt;/Button&gt;
+  );
+}
+  </code></pre>
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  <h2>🎨 Componentes Disponíveis</h2>
+
+  <ul>
+    <li>Button</li>
+    <li>(futuros: Input, Card, Modal, etc.)</li>
+  </ul>
+
+  <h2>🧩 Exemplo de Props (Button)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Prop</th>
+        <th>Tipo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>variant</td>
+        <td>string</td>
+        <td>Define o estilo visual do botão</td>
+      </tr>
+      <tr>
+        <td>size</td>
+        <td>number</td>
+        <td>Define o tamanho da fonte</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>boolean</td>
+        <td>Desativa o botão</td>
+      </tr>
+      <tr>
+        <td>onClick</td>
+        <td>function</td>
+        <td>Evento de clique</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>📚 Documentação</h2>
+
+  <p>
+    A documentação completa com exemplos interativos está disponível no Storybook:
+  </p>
+
+  <p>
+    👉 <a href="#">(adicione aqui o link do seu Storybook)</a>
+  </p>
+
+  <h2>🏗 Estrutura do Projeto</h2>
+
+  <pre><code>
+src/
+ ├─ components/
+ │   └─ Button/
+ │       ├─ Button.tsx
+ │       ├─ Button.types.ts
+ │       └─ index.ts
+ └─ index.ts
+  </code></pre>
+
+  <h2>🔄 Versionamento</h2>
+
+  <ul>
+    <li>PATCH → Correções</li>
+    <li>MINOR → Novas funcionalidades</li>
+    <li>MAJOR → Breaking changes</li>
+  </ul>
+
+  <h2>📌 Objetivo do Projeto</h2>
+
+  <ul>
+    <li>Estudo de arquitetura de bibliotecas React</li>
+    <li>Exploração de design systems</li>
+    <li>Experiência com build tools (tsup)</li>
+    <li>Publicação e versionamento no npm</li>
+    <li>Documentação com Storybook</li>
+  </ul>
+
+  <h2>🤝 Contribuição</h2>
+
+  <p>
+    Contribuições são bem-vindas. Sinta-se à vontade para abrir issues ou pull requests.
+  </p>
+
+  <h2>📄 Licença</h2>
+
+  <p>MIT</p>
