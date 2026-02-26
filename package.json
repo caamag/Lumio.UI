@@ -1,6 +1,13 @@
 {
-  "name": "lumio",
-  "private": true,
+  "name": "lumio-ui",
+  "description": "A personal React UI component library",
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Caio Lopes Magalhães",
+    "email": "caiolopesv@gmail.com",
+    "url": "https://www.linkedin.com/in/caio-lopes-programador/"
+  },
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
@@ -17,15 +24,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:lib": "tsup src/index.ts --format esm,cjs --dts"
+    "build:lib": "tsup src/index.ts --format esm,cjs --dts --tsconfig tsconfig.lib.json"
   },
   "dependencies": {
     "react": ">=18",
     "react-dom": ">=18",
+    "react-router-dom": "^7.13.1",
     "styled-components": ">=6"
   },
   "devDependencies": {

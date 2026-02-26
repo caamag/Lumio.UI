@@ -1,8 +1,8 @@
 export const Colors = {
-  primary: "#1762dc",
-  whiteBlue: "#9db7ff",
+  primary: "#5b4dac",
+  whiteBlue: "rgba(100, 72, 168, 0.5)",
   red: "#ca0f34",
-  primaryHover: "#0f4ab8",
+  primaryHover: "#483a98",
   redHover: "#a00b28",
   whiteGrey: "#e1e1e1",
 };
