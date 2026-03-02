@@ -1,4 +1,3 @@
-
   <h1>Lumio UI ✨</h1>
 
   <p>
@@ -82,16 +81,6 @@ export function Example() {
     </tbody>
   </table>
 
-  <h2>📚 Documentação</h2>
-
-  <p>
-    A documentação completa com exemplos interativos está disponível no Storybook:
-  </p>
-
-  <p>
-    👉 <a href="#">(adicione aqui o link do seu Storybook)</a>
-  </p>
-
   <h2>🏗 Estrutura do Projeto</h2>
 
   <pre><code>
@@ -127,7 +116,3 @@ src/
   <p>
     Contribuições são bem-vindas. Sinta-se à vontade para abrir issues ou pull requests.
   </p>
-
-  <h2>📄 Licença</h2>
-
-  <p>MIT</p>
