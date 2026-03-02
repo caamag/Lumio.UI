@@ -12,11 +12,11 @@
 
   <h2>🚀 Instalação</h2>
 
-  <pre><code>npm install lumio-ui</code></pre>
+  <pre><code>npm install @cainho_dev/lumio-ui</code></pre>
 
   <p>ou</p>
 
-  <pre><code>yarn add lumio-ui</code></pre>
+  <pre><code>yarn add @cainho_dev/lumio-ui</code></pre>
 
   <h2>📦 Requisitos</h2>
 
@@ -29,7 +29,7 @@
   <h2>🔧 Uso</h2>
 
   <pre><code>
-import { Button } from "lumio-ui";
+import { Button } from "@cainho_dev/lumio-ui";
 
 export function Example() {
   return (
