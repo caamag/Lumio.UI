@@ -5,6 +5,7 @@ export const HomeContainer = styled.div`
   max-width: 1600px;
   margin: 0 auto;
   padding-top: 120px;
+  height: 100vh;
 `;
 
 export const HomeSection = styled.section`

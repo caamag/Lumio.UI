@@ -15,7 +15,7 @@ const Header = () => {
         <a href="https://lumio-ui.vercel.app/?path=/docs/components-button--docs">
           Storybook
         </a>
-        <a href="https://github.com/caamag/Lumio.UI">GitHub</a>
+        <a href="https://github.com/caamag/Lumio.UI">Github</a>
         <a href="#">npm</a>
       </_.Nav>
     </_.Header>
