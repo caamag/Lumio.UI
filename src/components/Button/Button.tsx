@@ -1,4 +1,5 @@
 import { type ButtonProps } from "./Button.types";
+import { useTheme } from "../../theme/useTheme";
 import * as _ from "./style";
 
 export const Button = ({
@@ -6,8 +7,10 @@ export const Button = ({
   children,
   ...rest
 }: ButtonProps) => {
+  const theme = useTheme();
+
   return (
-    <_.Button variant={variant ?? "isPrimary"} {...rest}>
+    <_.Button variant={variant ?? "isPrimary"} {...rest} colors={theme.colors}>
       {children}
     </_.Button>
   );

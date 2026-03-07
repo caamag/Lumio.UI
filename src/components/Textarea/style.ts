@@ -1,31 +1,38 @@
 import { type TextareaProps } from "./textarea.type";
 import styled from "styled-components";
-import { Colors } from "../../global/Colors";
 
 export const Textarea = styled.textarea<TextareaProps>`
   width: ${(p) => p.width ?? "100%"};
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   box-sizing: border-box;
   border-radius: "4px";
   font-size: ${(p) => (p.size ? `${p.size}px` : "12px")};
-  color: ${Colors.primary};
+  color: ${(p) => p.colors?.primary};
+  border-radius: 4px;
+
+  resize: ${(p) =>
+    p.resize === "both" || p.resize === "vertical"
+      ? "vertical"
+      : p.resize === "horizontal"
+        ? "horizontal"
+        : "none"};
 
   border: ${(p) =>
     p.variant === "dotted"
-      ? `1px dotted ${Colors.primary}`
-      : `1px solid ${Colors.primary}`};
+      ? `1px dotted ${p.colors?.primary}`
+      : `1px solid ${p.colors?.primary}`};
 
   &:hover {
-    border-color: ${Colors.primaryHover};
+    border-color: ${(p) => p.colors?.primaryHover};
     border-style: ${(p) => (p.variant === "dotted" ? "dashed" : "solid")};
 
     box-shadow: ${(p) =>
-      p.variant === "normal" ? `1px 1px 5px ${Colors.whiteBlue}` : ""};
+      p.variant === "normal" ? `1px 1px 5px ${p.colors?.whiteBlue}` : ""};
   }
 
   &:disabled {
-    background-color: ${Colors.primary}20;
-    border-color: ${Colors.primary}20;
+    background-color: ${(p) => p.colors?.primary}20;
+    border-color: ${(p) => p.colors?.primary}20;
     cursor: not-allowed;
   }
 
@@ -34,6 +41,6 @@ export const Textarea = styled.textarea<TextareaProps>`
   }
 
   &::placeholder {
-    color: ${Colors.primary};
+    color: ${(p) => p.colors?.primary};
   }
 `;

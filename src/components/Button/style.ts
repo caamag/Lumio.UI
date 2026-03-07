@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { type ButtonProps } from "./Button.types";
-import { Colors } from "../../global/Colors";
 
 export const Button = styled.button<ButtonProps>`
   border: none;
@@ -15,30 +14,30 @@ export const Button = styled.button<ButtonProps>`
   transition: 250ms;
   width: ${(p) => (p.width ? p.width + "px" : "auto")};
 
-  color: ${(p) => (p.variant === "isEmpty" ? Colors.primary : "white")};
+  color: ${(p) => (p.variant === "isEmpty" ? p.colors?.primary : "white")};
 
   background-color: ${(p) =>
     p.variant === "isPrimary"
-      ? Colors.primary
+      ? p.colors?.primary
       : p.variant === "isEmpty"
         ? "transparent"
-        : Colors.red};
+        : p.colors?.red};
 
   border: 1px solid
-    ${(p) => (p.variant === "isEmpty" ? Colors.primary : "transparent")};
+    ${(p) => (p.variant === "isEmpty" ? p.colors?.primary : "transparent")};
 
   &:hover {
     background-color: ${(p) =>
       p.variant === "isPrimary"
-        ? Colors.primaryHover
+        ? p.colors?.primaryHover
         : p.variant === "isEmpty"
-          ? Colors.primary
-          : Colors.redHover};
+          ? p.colors?.primary
+          : p.colors?.redHover};
     color: ${(p) => (p.variant === "isEmpty" ? "white" : "white")};
   }
 
   &:disabled {
-    background-color: ${Colors.whiteGrey};
+    background-color: ${(p) => p.colors?.whiteGrey};
     cursor: not-allowed;
   }
 `;

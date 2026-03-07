@@ -5,4 +5,5 @@ export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
   resize?: "none" | "both" | "horizontal" | "vertical";
   size?: number;
   width?: string;
+  colors?: Record<string, string>;
 }
