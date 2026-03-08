@@ -16,3 +16,17 @@ export const Normal: Story = {
     variant: "normal",
   },
 };
+
+export const Underlined: Story = {
+  args: {
+    placeholder: "Underlined Input",
+    variant: "underlined",
+  },
+};
+
+export const Dotted: Story = {
+  args: {
+    placeholder: "Dotted Input",
+    variant: "dotted",
+  },
+};

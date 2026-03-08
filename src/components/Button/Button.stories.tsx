@@ -31,3 +31,11 @@ export const isDanger: Story = {
     variant: "isDanger",
   },
 };
+
+export const isDisabled: Story = {
+  args: {
+    children: "Disabled Button",
+    variant: "isPrimary",
+    disabled: true,
+  },
+};

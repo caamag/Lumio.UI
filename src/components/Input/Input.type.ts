@@ -6,4 +6,5 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   hasIcon?: boolean;
   icon?: string | JSX.Element;
   size?: number;
+  colors?: Record<string, string>;
 }

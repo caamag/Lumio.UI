@@ -4,4 +4,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "isPrimary" | "isEmpty" | "isDanger";
   size?: number;
   width?: number;
+  colors?: Record<string, string>;
 }

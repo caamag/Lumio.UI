@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { type InputProps } from "./Input.type";
-import { Colors } from "../../global/Colors";
 
 export const InputContainer = styled.div<InputProps>`
   padding: ${(p) =>
@@ -15,7 +14,7 @@ export const InputContainer = styled.div<InputProps>`
 
   svg {
     font-size: 18px;
-    color: ${Colors.primaryHover};
+    color: ${(p) => p.colors?.primary};
   }
 
   img {
@@ -28,14 +27,14 @@ export const InputContainer = styled.div<InputProps>`
     p.variant === "underlined"
       ? "none"
       : p.variant === "dotted"
-        ? `1px dotted ${Colors.primary}`
-        : `1px solid ${Colors.primary}`};
+        ? `1px dotted ${p.colors?.primary}`
+        : `1px solid ${p.colors?.primary}`};
 
   border-bottom: ${(p) =>
-    p.variant === "underlined" ? `1px solid ${Colors.primary}` : ""};
+    p.variant === "underlined" ? `1px solid ${p.colors?.primary}` : ""};
 
   &:hover {
-    border-color: ${Colors.primaryHover};
+    border-color: ${(p) => p.colors?.primaryHover};
     border-style: ${(p) =>
       p.variant === "dotted"
         ? "dashed"
@@ -44,15 +43,15 @@ export const InputContainer = styled.div<InputProps>`
           : "solid"};
 
     border-bottom: ${(p) =>
-      p.variant === "underlined" ? `1px solid ${Colors.primaryHover}` : ""};
+      p.variant === "underlined" ? `1px solid ${p.colors?.primaryHover}` : ""};
 
     box-shadow: ${(p) =>
-      p.variant === "normal" ? `1px 1px 5px ${Colors.whiteBlue}` : ""};
+      p.variant === "normal" ? `1px 1px 5px ${p.colors?.whiteBlue}` : ""};
   }
 
   &:disabled {
-    background-color: ${Colors.primary}20;
-    border-color: ${Colors.primary}20;
+    background-color: ${(p) => p.colors?.whiteGrey};
+    border-color: "transparent";
     cursor: not-allowed;
   }
 `;
@@ -63,13 +62,13 @@ export const Input = styled.input<InputProps>`
   background-color: transparent;
   border: none;
   font-size: ${(p) => (p.size ? `${p.size}px` : "12px")};
-  color: ${Colors.primary};
+  color: ${(p) => p.colors?.primary};
 
   &:focus {
     outline: none;
   }
 
   &::placeholder {
-    color: ${Colors.primary};
+    color: ${(p) => p.colors?.primary};
   }
 `;
