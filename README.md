@@ -55,7 +55,11 @@ export default function App() {
     &lt;ThemeProvider
       theme={{
         colors: {
-          primary: "#FF0000"
+          primary: "your-custom-primary-color",
+          primaryHover: "your-custom-primary-hover-color",
+          red: "your-custom-red-color",
+          whiteGrey: "your-custom-white-grey-color",
+          link: "your-custom-link-color",
         }
       }}
     &gt;
