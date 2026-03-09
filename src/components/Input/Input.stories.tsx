@@ -30,3 +30,11 @@ export const Dotted: Story = {
     variant: "dotted",
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    placeholder: "Disabled Input",
+    variant: "dotted",
+    disabled: true,
+  },
+};

@@ -15,6 +15,7 @@ export const Input = ({
       variant={variant}
       width={rest.width}
       colors={theme.colors}
+      data-disabled={rest.disabled}
     >
       <_.Input variant={variant ?? "normal"} {...rest} colors={theme.colors} />
       {rest.hasIcon &&

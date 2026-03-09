@@ -49,10 +49,12 @@ export const InputContainer = styled.div<InputProps>`
       p.variant === "normal" ? `1px 1px 5px ${p.colors?.whiteBlue}` : ""};
   }
 
-  &:disabled {
+  &.disabled,
+  &[data-disabled="true"] {
     background-color: ${(p) => p.colors?.whiteGrey};
-    border-color: "transparent";
+    border-color: transparent;
     cursor: not-allowed;
+    opacity: 0.7;
   }
 `;
 
@@ -70,5 +72,11 @@ export const Input = styled.input<InputProps>`
 
   &::placeholder {
     color: ${(p) => p.colors?.primary};
+  }
+
+  &:disabled {
+    background-color: ${(p) => p.colors?.whiteGrey};
+    border-color: "transparent";
+    cursor: not-allowed;
   }
 `;
