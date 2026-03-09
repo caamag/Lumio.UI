@@ -11,6 +11,7 @@ export const defaultTheme = {
     red: "#ca0f34",
     primaryHover: "#372a82",
     redHover: "#a00b28",
-    whiteGrey: "#e1e1e1",
+    whiteGrey: "#c6c6c6",
+    link: "#7b66f7",
   },
 };
