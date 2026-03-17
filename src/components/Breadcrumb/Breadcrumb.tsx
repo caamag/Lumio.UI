@@ -20,6 +20,7 @@ export const Breadcrumb = ({
             isCurrent={isLast}
             isLastItemFilled={isLastItemFilled}
             fontSize={fontSize}
+            colors={theme.colors}
           >
             <a href={item.href}>{item.label}</a>
             {index < items.length - 1 && " / "}

@@ -21,7 +21,7 @@ export const Button = styled.button<ButtonProps>`
       ? p.colors?.primary
       : p.variant === "isEmpty"
         ? "transparent"
-        : p.colors?.red};
+        : p.colors?.danger};
 
   border: 1px solid
     ${(p) => (p.variant === "isEmpty" ? p.colors?.primary : "transparent")};
@@ -32,7 +32,7 @@ export const Button = styled.button<ButtonProps>`
         ? p.colors?.primaryHover
         : p.variant === "isEmpty"
           ? p.colors?.primary
-          : p.colors?.redHover};
+          : p.colors?.dangerHover};
     color: ${(p) => (p.variant === "isEmpty" ? "white" : "white")};
   }
 
