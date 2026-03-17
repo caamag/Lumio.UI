@@ -11,14 +11,13 @@ export const Breadcrumb = ({
   const theme = useTheme();
 
   return (
-    <_.BreadcrumbContainer {...rest} colors={theme.colors}>
+    <_.BreadcrumbContainer {...rest} colors={theme.colors} fontSize={fontSize}>
       {items.map((item, index) => {
         const isLast = index === items.length - 1;
         return (
           <_.BreadcrumbItem
             key={index}
             isCurrent={isLast}
-            colors={theme.colors}
             isLastItemFilled={isLastItemFilled}
             fontSize={fontSize}
           >
