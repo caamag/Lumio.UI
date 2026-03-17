@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { type BreadcrumbStyleProps } from "./breadcrumb.types";
+import { type BreadcrumbStyleProps } from "./Breadcrumb.types";
 
 export const BreadcrumbContainer = styled.nav<BreadcrumbStyleProps>`
   font-family: ${(p) => p.fontFamily ?? "Arial, sans-serif"};

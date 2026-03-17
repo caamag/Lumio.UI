@@ -1,5 +1,5 @@
 import * as _ from "./style";
-import { type BreadcrumbProps } from "./breadcrumb.types";
+import { type BreadcrumbProps } from "./Breadcrumb.types";
 import { useTheme } from "../../theme/useTheme";
 
 export const Breadcrumb = ({
